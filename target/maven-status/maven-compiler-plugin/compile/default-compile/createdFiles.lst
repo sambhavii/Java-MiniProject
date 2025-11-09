@@ -1,0 +1,9 @@
+com\certificate\servlet\CertificateServlet.class
+com\certificate\util\XMLManager.class
+com\certificate\util\QRCodeGenerator.class
+com\certificate\model\Certificate.class
+com\certificate\servlet\VerificationServlet$VerificationResponse.class
+com\certificate\servlet\PDFServlet.class
+com\certificate\servlet\VerificationServlet.class
+com\certificate\util\PDFGenerator.class
+com\certificate\servlet\AdminServlet.class

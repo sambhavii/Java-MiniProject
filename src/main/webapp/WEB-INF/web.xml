@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    
+    <display-name>Certificate Generator System</display-name>
+    
+    <!-- Certificate Management Servlet -->
+    <servlet>
+        <servlet-name>CertificateServlet</servlet-name>
+        <servlet-class>com.certificate.servlet.CertificateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CertificateServlet</servlet-name>
+        <url-pattern>/certificate/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Admin Dashboard Servlet -->
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.certificate.servlet.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Verification Servlet -->
+    <servlet>
+        <servlet-name>VerificationServlet</servlet-name>
+        <servlet-class>com.certificate.servlet.VerificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerificationServlet</servlet-name>
+        <url-pattern>/verify/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- PDF Download Servlet -->
+    <servlet>
+        <servlet-name>PDFServlet</servlet-name>
+        <servlet-class>com.certificate.servlet.PDFServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PDFServlet</servlet-name>
+        <url-pattern>/pdf/*</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Error Pages -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+</web-app>
